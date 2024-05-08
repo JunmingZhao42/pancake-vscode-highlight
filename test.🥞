@@ -1,0 +1,22 @@
+fun main() {
+  /*
+   * Block comment
+  */
+  var my_base = @base;
+  var my_value = 42;
+  var len = 1;
+  @printf(my_base, len, @base, 1);
+  stw my_value, my_base;
+  var my_value2 = 0;
+  my_value = ldw my_base;
+
+  // Line comment
+  foo();
+  return 0;
+}
+
+fun foo() {
+  return 0;
+}
+
+

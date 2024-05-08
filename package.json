@@ -1,0 +1,25 @@
+{
+  "name": "pancake-syntax",
+  "displayName": "Pancake Syntax Highlight",
+  "description": "Syntax highligter for pancake programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pancake",
+      "aliases": ["Pancake", "pancake"],
+      "extensions": [".🥞",".pnk"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pancake",
+      "scopeName": "source.pancake",
+      "path": "./syntaxes/pancake.tmLanguage.json"
+    }]
+  }
+}
