@@ -5,6 +5,9 @@
 		"include": "#comments"
 	  },
 	  {
+		"include": "#base"
+	  },
+	  {
 		"include": "#keywords"
 	  },
 	  {
@@ -15,6 +18,12 @@
 	  },
 	  {
 		"include": "#operators"
+	  },
+	  {
+		"include": "#shapes"
+	  },
+	  {
+		"include": "#shape_numbers"
 	  },
 	  {
 		"include": "#constants"
@@ -37,11 +46,27 @@
 		  }
 		]
 	  },
+	  "base": {
+		"name": "constant.language.base.pancake",
+		"match": "@base\\b"
+	  },
 	  "keywords": {
 		"patterns": [
 		  {
 			"name": "keyword.control.pancake",
-			"match": "\\b(skip|stw|st8|lds|ldw|ld8|if|else|while|break|continue|raise|return|tick|var|in|with|handle|true|false|fun)\\b"
+			"match": "\\b(skip|stw|st8|lds|ldw|ld8|if|else|while|break|continue|raise|return|tick|in|with|handle)\\b"
+		  },
+		  {
+			"name": "keyword.function.pancake",
+			"match": "\\b(fun)\\b"
+		  },
+		  {
+			"name": "keyword.variable.pancake",
+			"match": "\\b(var)\\b"
+		  },
+		  {
+			"name": "constant.language.boolean.pancake",
+			"match": "\\b(true|false)\\b"
 		  }
 		]
 	  },
@@ -53,7 +78,7 @@
 		  },
 		  {
 			"name": "support.function.pancake",
-			"match": "@\\b([a-zA-Z_]\\w*)\\b"
+			"match": "@(?!base\\b)\\b([a-zA-Z_]\\w*)\\b"
 		  }
 		]
 	  },
@@ -74,18 +99,39 @@
 		  {
 			"name": "keyword.operator.arithmetic.pancake",
 			"match": "[+\\-*/%]"
+		  },
+		  {
+			"name": "keyword.operator.logical.pancake",
+			"match": "(&&|\\|\\||!)"
+		  },
+		  {
+			"name": "keyword.operator.bitwise.pancake",
+			"match": "(&|\\||\\^|~|<<|>>)"
 		  }
 		]
+	  },
+	  "shapes": {
+		"name": "meta.shape.pancake",
+		"begin": "\\{\\s*(?=\\d|\\{)",
+		"end": "\\}",
+		"patterns": [
+		  {
+			"include": "#shape_numbers"
+		  },
+		  {
+			"include": "#shapes"
+		  }
+		]
+	  },
+	  "shape_numbers": {
+		"name": "constant.numeric.shape.pancake",
+		"match": "\\b\\d+\\b(?=\\s*[,}])"
 	  },
 	  "constants": {
 		"patterns": [
 		  {
 			"name": "constant.numeric.pancake",
 			"match": "\\b\\d+\\b"
-		  },
-		  {
-			"name": "constant.language.pancake",
-			"match": "\\b(@base)\\b"
 		  }
 		]
 	  },

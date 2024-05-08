@@ -8,7 +8,7 @@ fun main() {
   @printf(my_base, len, @base, 1);
   stw my_value, my_base;
   var my_value2 = 0;
-  my_value = ldw my_base;
+  my_value2 = lds {3, {2, 1}} my_base;
 
   // Line comment
   foo();
@@ -18,5 +18,3 @@ fun main() {
 fun foo() {
   return 0;
 }
-
-

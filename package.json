@@ -2,7 +2,7 @@
   "name": "pancake-syntax",
   "displayName": "Pancake Syntax Highlight",
   "description": "Syntax highligter for pancake programming language",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -13,7 +13,7 @@
     "languages": [{
       "id": "pancake",
       "aliases": ["Pancake", "pancake"],
-      "extensions": [".🥞",".pnk"],
+      "extensions": [".🥞", ".pnk"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
@@ -26,6 +26,7 @@
     "type": "git",
     "url": "https://github.com/JunmingZhao42/pancake-vscode-highlight.git"
   },
+  "icon": "asset/pancake-logo-small.png",
   "publisher": "JunmingZhao42",
   "license": "MIT"
 }
