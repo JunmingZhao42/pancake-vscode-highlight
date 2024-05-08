@@ -28,6 +28,8 @@ Alternatively, you can clone this repository and copy into your local `.vscode/e
 2. `cp -r pancake-vscode-highlight $HOME/.vscode/extensions/`
 3. Reload VScode
 
+Alernatively, you can open the VSCode Extensions tab, click on the "..."  and then "Install from VSIX". Choose the `pancake-syntax-<version>.vsix` file from this repository.
+
 ## Contributing
 
 If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/JunmingZhao42/pancake-vscode-highlight.git).

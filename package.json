@@ -2,9 +2,9 @@
   "name": "pancake-syntax",
   "displayName": "Pancake Syntax Highlight",
   "description": "Syntax highligter for pancake programming language",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "engines": {
-    "vscode": "^1.89.0"
+    "vscode": "^1.60.0"
   },
   "categories": [
     "Programming Languages"
@@ -21,5 +21,11 @@
       "scopeName": "source.pancake",
       "path": "./syntaxes/pancake.tmLanguage.json"
     }]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JunmingZhao42/pancake-vscode-highlight.git"
+  },
+  "publisher": "JunmingZhao42",
+  "license": "MIT"
 }
