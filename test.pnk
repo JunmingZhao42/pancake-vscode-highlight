@@ -6,7 +6,7 @@ fun main() {
   var my_value = 42;
   var len = 1;
   @printf(my_base, len, @base, 1);
-  stw my_value, my_base;
+  st my_value, my_base;
   var my_value2 = 0;
   my_value2 = lds {3, {2, 1}} my_base;
 

@@ -8,6 +8,9 @@
 		"include": "#base"
 	  },
 	  {
+		"include": "#biw"
+	  },
+	  {
 		"include": "#keywords"
 	  },
 	  {
@@ -50,11 +53,15 @@
 		"name": "constant.language.base.pancake",
 		"match": "@base\\b"
 	  },
+	  "biw": {
+		"name": "constant.language.biw.pancake",
+		"match": "@biw\\b"
+	  },
 	  "keywords": {
 		"patterns": [
 		  {
 			"name": "keyword.control.pancake",
-			"match": "\\b(skip|stw|st8|lds|ldw|ld8|if|else|while|break|continue|raise|return|tick|in|with|handle)\\b"
+			"match": "\\b(skip|!stw|!ldw|!st8|!ld8|!st32|!ld32|st|st8|lds|ld8|if|else|while|break|continue|raise|return|tick|in|with|handle)\\b"
 		  },
 		  {
 			"name": "keyword.function.pancake",
@@ -75,10 +82,6 @@
 		  {
 			"name": "entity.name.function.pancake",
 			"match": "\\b([a-zA-Z_]\\w*)(?=\\s*\\()"
-		  },
-		  {
-			"name": "support.function.pancake",
-			"match": "@(?!base\\b)\\b([a-zA-Z_]\\w*)\\b"
 		  }
 		]
 	  },
