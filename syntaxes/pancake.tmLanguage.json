@@ -2,6 +2,9 @@
 	"scopeName": "source.pancake",
 	"patterns": [
 	  {
+		"include": "#annotations"
+	  },
+	  {
 		"include": "#comments"
 	  },
 	  {
@@ -36,6 +39,15 @@
 	  }
 	],
 	"repository": {
+	  "annotations": {
+		"patterns": [
+		  {
+			"name": "string.quoted.annotations.pancake",
+			"begin": "/@\\*",
+			"end": "@\\*/"
+		  }
+		]
+	  },
 	  "comments": {
 		"patterns": [
 		  {
@@ -101,7 +113,7 @@
 		  },
 		  {
 			"name": "keyword.operator.arithmetic.pancake",
-			"match": "[+\\-*/%]"
+			"match": "[+\\-*]"
 		  },
 		  {
 			"name": "keyword.operator.logical.pancake",
