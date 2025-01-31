@@ -20,6 +20,11 @@
       "language": "pancake",
       "scopeName": "source.pancake",
       "path": "./syntaxes/pancake.tmLanguage.json"
+    }],
+    "themes": [{
+      "label": "Pancake Theme",
+      "uiTheme": "vs-dark",
+      "path": "./themes/pancake-color-theme.json"
     }]
   },
   "repository": {

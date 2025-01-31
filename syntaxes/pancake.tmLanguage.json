@@ -2,9 +2,6 @@
 	"scopeName": "source.pancake",
 	"patterns": [
 	  {
-		"include": "#annotations"
-	  },
-	  {
 		"include": "#comments"
 	  },
 	  {
@@ -36,18 +33,25 @@
 	  },
 	  {
 		"include": "#strings"
+	  },
+	  {
+		"name": "meta.specification.block.pancake",
+		"begin": "/@",
+		"end": "@/",
+		"beginCaptures": {
+		  "0": { "name": "punctuation.definition.specification.begin.pancake" }
+		},
+		"endCaptures": {
+		  "0": { "name": "punctuation.definition.specification.end.pancake" }
+		},
+		"patterns": [
+		  {
+			"include": "$self"
+		  }
+		]
 	  }
 	],
 	"repository": {
-	  "annotations": {
-		"patterns": [
-		  {
-			"name": "string.quoted.annotations.pancake",
-			"begin": "/@\\*",
-			"end": "@\\*/"
-		  }
-		]
-	  },
 	  "comments": {
 		"patterns": [
 		  {
