@@ -30,15 +30,28 @@ Alternatively, you can clone this repository and copy into your local `.vscode/e
 
 Alernatively, you can open the VSCode Extensions tab, click on the "..."  and then "Install from VSIX". Choose the `pancake-syntax-<version>.vsix` file from this repository.
 
+For supporting better annotation highlighting, add this to your `settings.json` and adjust as needed:
+```json
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      { "scope": "meta.specification.block.pancake",
+        "settings": {
+          "fontStyle": "italic"
+        }},
+      { "scope": "keyword.annotation.pancake",
+        "settings": {
+          "foreground": "#9f4575",
+          "fontStyle": "bold"
+        }}
+    ]
+  }
+}
+```
+
 ## Contributing
 
 If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/JunmingZhao42/pancake-vscode-highlight.git).
-
-## Release Notes
-
-### 1.0.0
-
-- Initial release of the Pancake Syntax Highlighting extension.
 
 ---
 

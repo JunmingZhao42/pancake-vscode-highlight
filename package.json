@@ -2,7 +2,7 @@
   "name": "pancake-syntax",
   "displayName": "Pancake Syntax Highlight",
   "description": "Syntax highligter for pancake programming language",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -20,11 +20,6 @@
       "language": "pancake",
       "scopeName": "source.pancake",
       "path": "./syntaxes/pancake.tmLanguage.json"
-    }],
-    "themes": [{
-      "label": "Pancake Theme",
-      "uiTheme": "vs-dark",
-      "path": "./themes/pancake-color-theme.json"
     }]
   },
   "repository": {

@@ -2,6 +2,9 @@
 	"scopeName": "source.pancake",
 	"patterns": [
 	  {
+		"include": "#annotations"
+	  },
+	  {
 		"include": "#comments"
 	  },
 	  {
@@ -33,22 +36,6 @@
 	  },
 	  {
 		"include": "#strings"
-	  },
-	  {
-		"name": "meta.specification.block.pancake",
-		"begin": "/@",
-		"end": "@/",
-		"beginCaptures": {
-		  "0": { "name": "punctuation.definition.specification.begin.pancake" }
-		},
-		"endCaptures": {
-		  "0": { "name": "punctuation.definition.specification.end.pancake" }
-		},
-		"patterns": [
-		  {
-			"include": "$self"
-		  }
-		]
 	  }
 	],
 	"repository": {
@@ -73,11 +60,31 @@
 		"name": "constant.language.biw.pancake",
 		"match": "@biw\\b"
 	  },
+	  "annotations": {
+		"patterns": [
+		  {
+			"name": "meta.specification.block.pancake",
+			"begin": "/@",
+			"end": "@/",
+			"beginCaptures": {
+			  "0": { "name": "punctuation.definition.specification.begin.pancake" }
+			},
+			"endCaptures": {
+			  "0": { "name": "punctuation.definition.specification.end.pancake" }
+			},
+			"patterns": [
+				{
+				  "include": "$self"
+				}
+			  ]
+		  }
+		]
+	  },
 	  "keywords": {
 		"patterns": [
 		  {
 			"name": "keyword.control.pancake",
-			"match": "\\b(skip|!stw|!ldw|!st8|!ld8|!st32|!ld32|st|st8|lds|ld8|if|else|while|break|continue|raise|return|tick|in|with|handle)\\b"
+			"match": "\\b(skip|stw|ldw|st8|ld8|st32|ld32|st|lds|if|else|while|break|continue|raise|return|tick|in|with|handle)\\b"
 		  },
 		  {
 			"name": "keyword.function.pancake",
@@ -88,8 +95,8 @@
 			"match": "\\b(var)\\b"
 		  },
 		  {
-			"name": "constant.language.boolean.pancake",
-			"match": "\\b(true|false)\\b"
+			"name": "keyword.annotation.pancake",
+			"match": "\\b(requires|ensures|assert|unfolding|in|retval|heap|fold|unfold|inhale|exhale|assume)\\b"
 		  }
 		]
 	  },
@@ -104,7 +111,7 @@
 	  "variables": {
 		"patterns": [
 		  {
-			"name": "variable.other.pancake",
+			"name": "variable.pancake",
 			"match": "\\b([a-zA-Z_]\\w*)\\b"
 		  }
 		]
@@ -151,6 +158,10 @@
 		  {
 			"name": "constant.numeric.pancake",
 			"match": "\\b\\d+\\b"
+		  },
+		  {
+			"name": "constant.boolean.pancake",
+			"match": "\\b(true|false)\\b"
 		  }
 		]
 	  },
@@ -166,4 +177,4 @@
 		]
 	  }
 	}
-}
+  }

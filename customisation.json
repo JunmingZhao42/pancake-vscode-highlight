@@ -1,0 +1,18 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "meta.specification.block.pancake",
+        "settings": {
+          "fontStyle": "italic"
+        }},
+      {
+        "scope": "keyword.annotation.pancake",
+        "settings": {
+          "foreground": "#9f4575",
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  }
+}

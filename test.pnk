@@ -16,6 +16,6 @@ fun main() {
 }
 
 fun foo() {
-  /*@ ensures true @*/
+  /@ ensures 1 == 2 @/
   return 0;
 }
