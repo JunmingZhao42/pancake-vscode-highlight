@@ -2,7 +2,7 @@
   "name": "pancake-syntax",
   "displayName": "Pancake Syntax Highlight",
   "description": "Syntax highligter for pancake programming language",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.60.0"
   },
