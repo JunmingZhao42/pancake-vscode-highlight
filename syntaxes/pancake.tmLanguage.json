@@ -97,6 +97,10 @@
 		  {
 			"name": "keyword.annotation.pancake",
 			"match": "\\b(requires|ensures|assert|unfolding|in|retval|heap|fold|unfold|inhale|exhale|assume)\\b"
+		  },
+		  {
+			"name": "keyword.export.pancake",
+			"match": "\\b(export)\\b"
 		  }
 		]
 	  },
