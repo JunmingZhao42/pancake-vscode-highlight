@@ -146,7 +146,8 @@
 		"end": "\\}",
 		"patterns": [
 		  {
-			"include": "#shape_numbers"
+			"name": "constant.numeric.shape.pancake",
+			"match": "\\b\\d+\\b(?=\\s*[,}])"
 		  },
 		  {
 			"include": "#shapes"
@@ -155,7 +156,7 @@
 	  },
 	  "shape_numbers": {
 		"name": "constant.numeric.shape.pancake",
-		"match": "\\b\\d+\\b(?=\\s*[,}])"
+		"match": "\\b\\d+\\b(?=\\s*[A-Za-z])"
 	  },
 	  "constants": {
 		"patterns": [
