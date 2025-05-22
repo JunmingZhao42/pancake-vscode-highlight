@@ -123,12 +123,12 @@
 	  "operators": {
 		"patterns": [
 		  {
-			"name": "keyword.operator.assignment.pancake",
-			"match": "="
+			"name": "keyword.operator.bitwise.pancake",
+			"match": "(<<|>>>|>>|#>>)"
 		  },
 		  {
-			"name": "keyword.operator.arithmetic.pancake",
-			"match": "[+\\-*]"
+			"name": "keyword.operator.comparison.pancake",
+			"match": "(==|!=|<=\\+|>=\\+|<\\+|>\\+|<=|>=|<|>)"
 		  },
 		  {
 			"name": "keyword.operator.logical.pancake",
@@ -136,7 +136,15 @@
 		  },
 		  {
 			"name": "keyword.operator.bitwise.pancake",
-			"match": "(&|\\||\\^|~|<<|>>)"
+			"match": "(&|\\||\\^)"
+		  },
+		  {
+			"name": "keyword.operator.arithmetic.pancake",
+			"match": "[+\\-*]"
+		  },
+		  {
+			"name": "keyword.operator.assignment.pancake",
+			"match": "="
 		  }
 		]
 	  },
