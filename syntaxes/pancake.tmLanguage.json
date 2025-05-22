@@ -32,6 +32,9 @@
 		"include": "#shape_numbers"
 	  },
 	  {
+		"include": "#struct_indices"
+	  },
+	  {
 		"include": "#constants"
 	  },
 	  {
@@ -161,6 +164,10 @@
 			"include": "#shapes"
 		  }
 		]
+	  },
+	  "struct_indices": {
+		"name": "struct.index.pancake",
+		"match": "\\.\\d+"
 	  },
 	  "shape_numbers": {
 		"name": "constant.numeric.shape.pancake",
