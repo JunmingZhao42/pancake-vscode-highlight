@@ -17,20 +17,25 @@ This VS Code extension provides syntax highlighting for the Pancake programming 
 
 ## Installation
 
-1. Open Visual Studio Code.
-2. Open the Extensions view by clicking on the square icon in the Activity Bar on the side of VS Code or by pressing `Ctrl+Shift+X` (Windows, Linux) or `Cmd+Shift+X` (macOS).
-3. Search for "Pancake Syntax" in the Extensions view search bar.
-4. Click the "Install" button for the "Pancake Syntax" extension.
-5. Once installed, the extension will be automatically activated when you open a file with a `.pnk` or `.🥞` extension.
+### Method 1: VS Code Marketplace (Recommended)
+1. Open VS Code extension side tab (`Ctrl+Shift+X` (Windows, Linux) /`Cmd+Shift+X` (macOS))
+2. Search for "Pancake Syntax" in the Extensions view search bar.
+3. Click the "Install" button for the "Pancake Syntax" extension.
+4. Once installed, the extension will be work for `.pnk` or `.🥞` files.
+This way allows you to easily update the extension with changes we make.
 
-Alternatively, you can clone this repository and copy into your local `.vscode/extensions`:
-1. `git clone https://github.com/JunmingZhao42/pancake-vscode-highlight.git`
-2. `cp -r pancake-vscode-highlight $HOME/.vscode/extensions/`
-3. Reload VScode
+### Method 2: Install from VSIX File
+1. Download the `pancake-syntax-<version>.vsix> file from this repository
+2. Open VS Code extension side tab (`Ctrl+Shift+X` (Windows, Linux) /`Cmd+Shift+X` (macOS))
+3. Click the "..." menu from the right upper corner and select "Install from VSIX..."
+4. Select the downloaded `.vsix` file.
 
-Alernatively, you can open the VSCode Extensions tab, click on the "..."  and then "Install from VSIX". Choose the `pancake-syntax-<version>.vsix` file from this repository.
+**To create your own VSIX file**
+1. Clone this repository: `git clone https://github.com/JunmingZhao42/pancake-vscode-highlight.git`
+2. Install dependencies: `npm install`
+3. Package the extension: `vsce package`
 
-For supporting better annotation highlighting, add this to your `settings.json` and adjust as needed:
+**(Optional)** For supporting better annotation highlighting, add this to your `settings.json` and adjust as needed:
 ```json
 {
   "editor.tokenColorCustomizations": {
