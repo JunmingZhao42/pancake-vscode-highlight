@@ -12,10 +12,17 @@ fun main() {
 
   // Line comment
   foo();
+  
+  var 1 my_value3 = bar(<|0, 1|>);
+  var my_comp = 1 == 2;
   return 0;
 }
 
-fun foo() {
+export fun foo() {
   /@ ensures 1 == 2 @/
   return 0;
+}
+
+fun bar(2 a) {
+  return a.1;
 }

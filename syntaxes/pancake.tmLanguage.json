@@ -32,6 +32,9 @@
 		"include": "#shape_numbers"
 	  },
 	  {
+		"include": "#struct_indices"
+	  },
+	  {
 		"include": "#constants"
 	  },
 	  {
@@ -97,6 +100,10 @@
 		  {
 			"name": "keyword.annotation.pancake",
 			"match": "\\b(requires|ensures|assert|unfolding|in|retval|heap|fold|unfold|inhale|exhale|assume)\\b"
+		  },
+		  {
+			"name": "keyword.export.pancake",
+			"match": "\\b(export)\\b"
 		  }
 		]
 	  },
@@ -119,12 +126,12 @@
 	  "operators": {
 		"patterns": [
 		  {
-			"name": "keyword.operator.assignment.pancake",
-			"match": "="
+			"name": "keyword.operator.bitwise.pancake",
+			"match": "(<<|>>>|>>|#>>)"
 		  },
 		  {
-			"name": "keyword.operator.arithmetic.pancake",
-			"match": "[+\\-*]"
+			"name": "keyword.operator.comparison.pancake",
+			"match": "(==|!=|<=\\+|>=\\+|<\\+|>\\+|<=|>=|<|>)"
 		  },
 		  {
 			"name": "keyword.operator.logical.pancake",
@@ -132,7 +139,15 @@
 		  },
 		  {
 			"name": "keyword.operator.bitwise.pancake",
-			"match": "(&|\\||\\^|~|<<|>>)"
+			"match": "(&|\\||\\^)"
+		  },
+		  {
+			"name": "keyword.operator.arithmetic.pancake",
+			"match": "[+\\-*]"
+		  },
+		  {
+			"name": "keyword.operator.assignment.pancake",
+			"match": "="
 		  }
 		]
 	  },
@@ -142,16 +157,21 @@
 		"end": "\\}",
 		"patterns": [
 		  {
-			"include": "#shape_numbers"
+			"name": "constant.numeric.shape.pancake",
+			"match": "\\b\\d+\\b(?=\\s*[,}])"
 		  },
 		  {
 			"include": "#shapes"
 		  }
 		]
 	  },
+	  "struct_indices": {
+		"name": "struct.index.pancake",
+		"match": "\\.\\d+"
+	  },
 	  "shape_numbers": {
 		"name": "constant.numeric.shape.pancake",
-		"match": "\\b\\d+\\b(?=\\s*[,}])"
+		"match": "\\b\\d+\\b(?=\\s*[A-Za-z])"
 	  },
 	  "constants": {
 		"patterns": [
